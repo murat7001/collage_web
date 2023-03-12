@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="/css/sttyle.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    
+    <section class="subHeader">
+        <nav>
+            <a href="index.html"><img src="/image/transparan.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark"  onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.html">COURSE</a></li>
+                    <li><a href="index.html">BLOG</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" id="xy" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+
+    <!-- about us content -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Wr are the world's biggest university</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem quasi cum laboriosam molestiae incidunt veritatis beatae aliquid labore, quam autem?</p>
+                <a href="#" class="hero-btn red-btn">Explore Now</a>
+            </div>
+            <div class="about-col">
+                <img src="/image/about.jpg" >
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+<!-- Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate culpa maxime ipsum, <br>impedit id quidem tempore sequi earum, fuga odio corrupti soluta beatae quos repellendus aliquam harum expedita animi alias?</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i></p>
+            <i class="fa-brands fa-instagram"></i></p>
+            <i class="fa-brands fa-twitter"></i></p>
+            <i class="fa-brands fa-linkedin"></i></p>
+        </div>
+        <span>designed by <a href="#">Murat</a></span>
+    </section>
+
+
+
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        var xy=document.getElementById("xy");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+        document.addEventListener('click', e=>{
+            if(
+                !e.composedPath().includes(navLinks) &&
+                !e.composedPath().includes(xy)
+            ){
+                navLinks.style.right="-200px"
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>
