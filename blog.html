@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collage</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="/css/sttyle.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+    
+    <section class="subHeader">
+        <nav>
+            <a href="index.html"><img src="/image/transparan.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark"  onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" id="xy" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Courses & Online Programs For 2023</h1>
+    </section>
+
+    <!-- blog content -->
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="/image/certificate.jpg" >
+                <h2>Our Courses & Online Programs For 2023</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rem at nesciunt odit. Perferendis mollitia praesentium quasi dolorum maiores autem, sapiente provident possimus velit eligendi similique ab laborum sint veritatis.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus illo facere rerum! Voluptate atque corrupti nemo minima quae, suscipit tenetur impedit. Recusandae, ex illum eius omnis expedita aspernatur inventore laboriosam.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum corporis, vel aliquid quia aut dolore ducimus, possimus aperiam laboriosam cupiditate explicabo quos repellat modi itaque a repudiandae quibusdam at? Adipisci.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sed, consequatur saepe quam consequuntur, aspernatur perferendis quo eius velit autem corporis quos, corrupti veritatis voluptates illo! Necessitatibus labore quis quo.</p>
+
+                <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="email" placeholder="Enter Email">
+                        <textarea  rows="5" placeholder="Your Comment"></textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                    </form>
+                </div>
+            </div>
+
+            
+
+
+
+            <div class="blog-right">
+                <h3>Post Caegories</h3>
+                <div>
+                    <span>Business Analytics</span>
+                    <span>21</span>
+                </div>
+
+                <div>
+                    <span>Machine Learning</span>
+                    <span>28</span>
+                </div>
+
+                <div>
+                    <span>AutoCad</span>
+                    <span>34</span>
+                </div>
+
+                <div>
+                    <span>Computer Science</span>
+                    <span>36</span>
+                </div>
+
+                <div>
+                    <span>Data Science</span>
+                    <span>34</span>
+                </div>
+
+                <div>
+                    <span>Data Analysis</span>
+                    <span>17</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer-->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate culpa maxime ipsum, <br>impedit id quidem tempore sequi earum, fuga odio corrupti soluta beatae quos repellendus aliquam harum expedita animi alias?</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i></p>
+            <i class="fa-brands fa-instagram"></i></p>
+            <i class="fa-brands fa-twitter"></i></p>
+            <i class="fa-brands fa-linkedin"></i></p>
+        </div>
+        <span>designed by <a href="#">Murat</a></span>
+    </section>
+
+
+
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        var xy=document.getElementById("xy");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+
+        document.addEventListener('click', e=>{
+            if(
+                !e.composedPath().includes(navLinks) &&
+                !e.composedPath().includes(xy)
+            ){
+                navLinks.style.right="-200px"
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>
